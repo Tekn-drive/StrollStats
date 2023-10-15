@@ -13,6 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/help', function () {
     return view('welcome');
+});
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/tracker', function () {
+    return view('track');
+});
+
+#This is for the blade template in the template folder
+Route::get('/blade_template', function () {
+    return view('template\template');
 });
