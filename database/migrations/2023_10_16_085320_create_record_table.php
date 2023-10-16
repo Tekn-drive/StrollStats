@@ -15,9 +15,11 @@ class CreateRecordTable extends Migration
     {
         Schema::create('record', function (Blueprint $table) {
             $table->id('walkID');
-            $table->timestamps('');
+            $table->timestamps();
+            $table->date('walkDate');
             $table->float('distance');
             $table->float('calories');
+
         });
     }
 
