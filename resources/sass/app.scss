@@ -5,3 +5,10 @@
 /* Bootstrap */
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
+
+.full-height-flex-center {
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
