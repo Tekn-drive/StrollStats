@@ -14,7 +14,7 @@ class RecordFactory extends Factory
     public function definition()
     {
         return [
-            //
+            // 
         ];
     }
 }
