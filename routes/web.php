@@ -32,6 +32,10 @@ Route::get('/tracker', function () {
     return view('track');
 });
 
+Route::get('/improvedlogin', function(){
+    return view('improvedlogin');
+});
+
 #This is for the blade template in the template folder
 Route::get('/blade_template', function () {
     return view('template\template');
