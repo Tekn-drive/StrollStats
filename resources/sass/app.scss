@@ -1,14 +1,8 @@
-/* Fonts */
-@import url('https://fonts.bunny.net/css?family=Nunito');
-/* Variables */
-@import 'variables';
-/* Bootstrap */
-@import 'bootstrap/scss/bootstrap';
-@import 'bootstrap-icons/font/bootstrap-icons.css';
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
-.full-height-flex-center {
-    min-height: 100vh; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-}
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
