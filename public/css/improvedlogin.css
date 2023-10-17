@@ -1,0 +1,24 @@
+.title{
+    color: #14A44D;
+    text-align: center;
+    font-family: 'Nunito';
+    padding-top: 9%;
+    font-size: 50px;
+}
+
+.inputs{
+    background-color: green;
+    align-content: center;
+}
+
+.Username{
+    background-color: #D9D9D9;
+    height: 50px;
+    width: 500px;
+}
+
+.Password{
+    background-color: #D9D9D9;
+    height: 50px;
+    width: 500px;
+}

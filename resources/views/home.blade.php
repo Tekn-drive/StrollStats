@@ -5,6 +5,6 @@
 @endsection
 
 @section('container')
-    <h1>Welcome to Stroll Stats</h1>
+    <h1>Welcome to StrollStats</h1>
 @endsection
 
