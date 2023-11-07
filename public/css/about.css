@@ -1,0 +1,31 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; 
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    border-radius: 5px 5px 0 0;
+}
+
+.card-heading {
+    font-size: 1.2rem; 
+}
+
+.card-title {
+    font-size: 1.25rem; 
+}
+
+.card-text {
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .card-text, .card-title {
+        text-align: center;
+    }
+}
