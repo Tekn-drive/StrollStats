@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class DeleteUserColumn extends Migration
+class DeleteRecordTale extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class DeleteUserColumn extends Migration
      */
     public function up()
     {
-        Schema::table('user', function (Blueprint $table) {
-            Schema::dropIfExists('user');
+        Schema::table('record', function (Blueprint $table) {
+            Schema::dropIfExists('record');
         });
     }
 
@@ -25,7 +25,7 @@ class DeleteUserColumn extends Migration
      */
     public function down()
     {
-        Schema::table('user', function (Blueprint $table) {
+        Schema::table('record', function (Blueprint $table) {
             //
         });
     }

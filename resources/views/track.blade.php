@@ -6,5 +6,4 @@
 
 @section('container')
     <h1>Track Your Steps</h1>
-    {{$records->id}}
 @endsection
