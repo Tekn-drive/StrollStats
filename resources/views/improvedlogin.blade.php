@@ -7,6 +7,10 @@
     <title>StrollStats - Authentication</title>
 </head>
 <body>
-    <h1 class = "main">StrollStats</h1>
+    <h1 class = title>StrollStats</h1>
+    <div class = inputs>
+        <input type = "text" class = "Username">
+        <input type = "text" class = "Password">
+    </div>
 </body>
 </html>
