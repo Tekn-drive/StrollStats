@@ -42,9 +42,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function totalSteps()
+    {
+        return $this->steps()->sum('steps');
+    }
+
     public function steps()
     {
-        return $this->hasMany(Step::class);
+        return $this->hasMany(Step::class, 'player_id');
     }
 
     public function player()

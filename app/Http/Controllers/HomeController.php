@@ -28,7 +28,8 @@ class HomeController extends Controller
     {
         $user = auth()->user();
         $playerDetails = $user->player;
+        $totalSteps = $user->totalSteps();
 
-        return view('home', compact('user', 'playerDetails'));
+        return view('home', compact('user', 'playerDetails', 'totalSteps'));
     }
 }
