@@ -41,4 +41,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function totalSteps()
+    {
+        return $this->steps()->sum('steps');
+    }
+
+    public function steps()
+    {
+        return $this->hasMany(Step::class, 'player_id');
+    }
+
+    public function player()
+    {
+        return $this->hasOne(Player::class, 'player_id');
+    }
 }

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Player;
+use App\Models\Step;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user = auth()->user();
+        $playerDetails = $user->player;
+        $totalSteps = $user->totalSteps();
+
+        return view('home', compact('user', 'playerDetails', 'totalSteps'));
     }
 }

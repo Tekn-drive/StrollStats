@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRecordsTable extends Migration
+class RecreateStepsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateRecordsTable extends Migration
      */
     public function up()
     {
-        Schema::create('records', function (Blueprint $table) {
-            $table->id('walkID');
+        Schema::create('steps', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
-            $table->date('walkDate');
-            $table->float('distance');
-            $table->float('calories');
-
+            $table->unsignedBigInteger('player_id');
+            $table->unsignedBigInteger('steps');
+            $table->foreign('player_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -30,6 +29,6 @@ class CreateRecordsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('records');
+        Schema::dropIfExists('steps');
     }
 }

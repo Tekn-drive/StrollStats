@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRecordsTable extends Migration
+class DeleteRecordTale extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreateRecordsTable extends Migration
      */
     public function up()
     {
-        Schema::create('records', function (Blueprint $table) {
-            $table->id('walkID');
-            $table->timestamps();
-            $table->date('walkDate');
-            $table->float('distance');
-            $table->float('calories');
-
+        Schema::table('record', function (Blueprint $table) {
+            Schema::dropIfExists('record');
         });
     }
 
@@ -30,6 +25,8 @@ class CreateRecordsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('records');
+        Schema::table('record', function (Blueprint $table) {
+            //
+        });
     }
 }
