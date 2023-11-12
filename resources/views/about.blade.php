@@ -5,7 +5,7 @@
 @endsection
 
 @section('container')
-<div class="container my-5">
+<div class="container my-5 about-background">
     
     <div class="row">
         <div class="col-12">
@@ -32,10 +32,10 @@
     </div>
 
 
-    <div class="row text-center mt-4">
-        
-        <div class="col-md-2 mb-3">
-            <div class="card">
+    <div class="row justify-content-center mt-4">
+    
+        <div class="col-auto mb-3">
+            <div class="card team-card">
                 <img src="./images/steps.jpg" class="card-img-top" alt="team member photo">
                 <div class="card-body">
                     <h5 class="card-heading">Meet Our<br>Team Members</h5>
@@ -43,55 +43,27 @@
             </div>
         </div>
 
-        <div class="col-md-2 mb-3">
-            <div class="card">
-                <img src="./images/juan.png" class="card-img-top" alt="team member photo">
-                <div class="card-body">
-                    <h5 class="card-title">Juan Arnold</h5>
-                    <p class="card-text">Technical Director</p>
-                </div>
-            </div>
-        </div>
+        @php
+            $teamMembers = [
+                ['image' => 'juan.png', 'name' => 'Juan Arnold', 'title' => 'Technical Director'],
+                ['image' => 'darian.jpg', 'name' => 'Darian Elbert', 'title' => 'Project Manager'],
+                ['image' => 'darian.jpg', 'name' => 'Nathanael Deciano', 'title' => 'Project Manager'],
+                ['image' => 'darian.jpg', 'name' => 'Dave Sebastian', 'title' => 'Project Manager'],
+                ['image' => 'darian.jpg', 'name' => 'Nathan Setiawan', 'title' => 'Project Manager'],
+            ];
+        @endphp
 
-        <div class="col-md-2 mb-3">
-            <div class="card">
-                <img src="./images/juan.png" class="card-img-top" alt="team member photo">
-                <div class="card-body">
-                    <h5 class="card-title">Juan Arnold</h5>
-                    <p class="card-text">Technical Director</p>
+        @foreach ($teamMembers as $member)
+            <div class="col-auto mb-3">
+                <div class="card team-card">
+                    <img src="./images/{{ $member['image'] }}" class="card-img-top" alt="{{ $member['name'] }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $member['name'] }}</h5>
+                        <p class="card-text">{{ $member['title'] }}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="col-md-2 mb-3">
-            <div class="card">
-                <img src="./images/juan.png" class="card-img-top" alt="team member photo">
-                <div class="card-body">
-                    <h5 class="card-title">Juan Arnold</h5>
-                    <p class="card-text">Technical Director</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-2 mb-3">
-            <div class="card">
-                <img src="./images/juan.png" class="card-img-top" alt="team member photo">
-                <div class="card-body">
-                    <h5 class="card-title">Juan Arnold</h5>
-                    <p class="card-text">Technical Director</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-2 mb-3">
-            <div class="card">
-                <img src="./images/juan.png" class="card-img-top" alt="team member photo">
-                <div class="card-body">
-                    <h5 class="card-title">Juan Arnold</h5>
-                    <p class="card-text">Technical Director</p>
-                </div>
-            </div>
-        </div>
+        @endforeach
         
     </div>
 </div>
