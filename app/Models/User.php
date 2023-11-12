@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Step::class);
     }
+
+    public function player()
+    {
+        return $this->hasOne(Player::class, 'player_id');
+    }
 }

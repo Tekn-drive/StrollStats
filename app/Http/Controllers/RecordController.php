@@ -7,7 +7,7 @@ use app\Models\Record;
 
 class RecordController extends Controller
 {
-    //
+    
     public function allView(){
         $Record;
 
