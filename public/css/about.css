@@ -1,7 +1,20 @@
+.team-card {
+    max-width: 250px;
+    margin: auto; 
+}
+.card-img-top {
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: .25rem .25rem 0 0;
+}
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; 
+    width: 100%;
+    max-width: 18rem; 
 }
 
 .card:hover {
@@ -13,7 +26,11 @@
 }
 
 .card-heading {
-    font-size: 1.2rem; 
+    font-size: 1.4rem; 
+}
+
+.card-body {
+    height: 6rem;
 }
 
 .card-title {
@@ -25,12 +42,7 @@
 }
 
 @media (min-width: 768px) {
-    .card-text, .card-title {
+    .card-text, .card-title, .card-heading {
         text-align: center;
     }
-}
-
-@font-face {
-    font-family: 'Montserrat', sans-serif;
-    src: url(Montserrat.ttf) format('ttf');
 }
