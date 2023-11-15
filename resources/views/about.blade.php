@@ -1,4 +1,5 @@
 @extends('template.template')
+<link rel = "stylesheet" href = "css/about.css">
 
 @section('title')
     StrollStats - About

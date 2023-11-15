@@ -40,6 +40,10 @@ Route::get('/blade_template', function () {
     return view('template\template');
 });
 
+Route::get('/progress', function(){
+    return view('progress');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
