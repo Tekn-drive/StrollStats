@@ -43,11 +43,6 @@
         @yield('container')
     </div>
 <<<<<<< HEAD
-    <a href="/home">
-        <button id="plusBtn">
-            +
-        </button>
-    </a>
     <footer class="justify-content-between align-items-center py-3 my-4 border-top">
         <div class="container d-flex justify-content-between">
             <div class="col-md-4 align-items-center">
