@@ -1,12 +1,5 @@
-.about-background {
-    background-image: url('/images/blue.png') no-repeat center center fixed;
-    height : 100%;
-    background-size: cover;
-    position: relative;
-}
-
 .team-card {
-    max-width: 18rem;
+    max-width: 250px;
     margin: auto; 
 }
 .card-img-top {
@@ -20,7 +13,8 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; 
-    width: 18rem; 
+    width: 100%;
+    max-width: 18rem; 
 }
 
 .card:hover {

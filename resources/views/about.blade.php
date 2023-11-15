@@ -35,7 +35,7 @@
 
     <div class="row justify-content-center mt-4">
     
-        <div class="col-auto mb-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
             <div class="card team-card">
                 <img src="./images/steps.jpg" class="card-img-top" alt="team member photo">
                 <div class="card-body">
@@ -47,15 +47,15 @@
         @php
             $teamMembers = [
                 ['image' => 'juan.png', 'name' => 'Juan Arnold', 'title' => 'Technical Director'],
-                ['image' => 'darian.jpg', 'name' => 'Darian Elbert', 'title' => 'Project Manager'],
-                ['image' => 'darian.jpg', 'name' => 'Nathanael Deciano', 'title' => 'Project Manager'],
-                ['image' => 'darian.jpg', 'name' => 'Dave Sebastian', 'title' => 'Project Manager'],
-                ['image' => 'darian.jpg', 'name' => 'Nathan Setiawan', 'title' => 'Project Manager'],
+                ['image' => 'juan.png', 'name' => 'Darian Elbert', 'title' => 'Project Manager'],
+                ['image' => 'juan.png', 'name' => 'Nathanael Deciano', 'title' => 'Project Manager'],
+                ['image' => 'juan.png', 'name' => 'Dave Sebastian', 'title' => 'Project Manager'],
+                ['image' => 'juan.png', 'name' => 'Nathan Setiawan', 'title' => 'Project Manager'],
             ];
         @endphp
 
         @foreach ($teamMembers as $member)
-            <div class="col-auto mb-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
                 <div class="card team-card">
                     <img src="./images/{{ $member['image'] }}" class="card-img-top" alt="{{ $member['name'] }}">
                     <div class="card-body">
