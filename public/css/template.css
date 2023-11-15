@@ -1,0 +1,31 @@
+.Button{
+    position: fixed;
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    align-content: center;
+    background-color: aquamarine;
+    border-radius: 50%;
+    /* padding: 10px; */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  #plusBtn {
+      /* display: none; Hidden by default */
+      position: fixed;
+      bottom: 20px; /* Place the button at the bottom of the page */
+      right: 30px; /* Place the button 30px from the right */
+      z-index: 99; /* Make sure it does not overlap */
+      border: none; /* Remove borders */
+      outline: none; /* Remove outline */
+      background-color: lightblue; /* Set a background color */
+      color: black; /* Text color */
+      cursor: pointer; /* Add a mouse pointer on hover */
+      padding-top: 12px; /* Some padding */
+      padding-bottom: 12px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 50%; /* Rounded corners */
+      font-size: 18px; /* Increase font size */
+      align-content: center;
+    }
