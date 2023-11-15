@@ -41,6 +41,15 @@
     font-size: 0.875rem;
 }
 
+.about-carousel {
+    height: 500px;
+}
+
+.about-carousel .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
 @media (min-width: 768px) {
     .card-text, .card-title, .card-heading {
         text-align: center;
