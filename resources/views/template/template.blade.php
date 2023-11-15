@@ -40,16 +40,7 @@
     <div>
         @yield('container')
     </div>
-
-    <footer class="justify-content-between align-items-center py-3 my-4 border-top, padding-left:0;">
-      <div class="container d-flex justify-content-between" style="padding-left: 1; margin-left: 0;">
-          <div class="col-md-4 align-items-center">
-              <a class="navbar-brand" href="{{ url('/') }}">StrollStats</a>
-              <span class="mb-3 mb-md-0 text-body-secondary">&copy; {{ date("Y") }}</span>
-          </div>
-      </div>
-    </footer>
-
+    
     <a href="/home">
         <button id="plusBtn">
             +
