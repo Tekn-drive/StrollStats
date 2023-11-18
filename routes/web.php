@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\StepController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,9 +28,9 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/tracker', function () {
-    return view('track');
-});
+Route::get('/tracker', [StepController::class, 'index'])->name('steps.allSteps');
+
+Route::post('/processForm', [StepController::class, 'processForm']);
 
 Route::get('/improvedlogin', function(){
     return view('improvedlogin');
