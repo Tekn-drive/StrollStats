@@ -80,10 +80,10 @@
         @php
             $teamMembers = [
                 ['image' => 'juan.png', 'name' => 'Juan Arnold', 'title' => 'Technical Director'],
-                ['image' => 'juan.png', 'name' => 'Darian Elbert', 'title' => 'Project Manager'],
-                ['image' => 'juan.png', 'name' => 'Nathanael Deciano', 'title' => 'Project Manager'],
+                ['image' => 'darian.jpg', 'name' => 'Darian Elbert', 'title' => 'Financial Analyst'],
+                ['image' => 'deci.jpg', 'name' => 'Nathanael Deciano', 'title' => 'Systems Administrator'],
                 ['image' => 'juan.png', 'name' => 'Dave Sebastian', 'title' => 'Project Manager'],
-                ['image' => 'juan.png', 'name' => 'Nathan Setiawan', 'title' => 'Project Manager'],
+                ['image' => 'juan.png', 'name' => 'Nathan Setiawan', 'title' => 'Operations Manager'],
             ];
         @endphp
 
