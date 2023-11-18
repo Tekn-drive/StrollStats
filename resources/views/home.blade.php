@@ -16,4 +16,6 @@
         <p>Gender: {{ $playerDetails->player_gender }}</p>
     @endif
     <p>Total Steps Taken: {{ $totalSteps }}</p>
+
+    <a href="/home/edit" class="btn btn-primary">Edit Profile</a>
 @endsection

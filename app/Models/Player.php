@@ -13,4 +13,8 @@ class Player extends Model
     {
         return $this->belongsTo(User::class, 'player_id');
     }
+
+    protected $fillable = [
+        'player_phone',
+    ];
 }
