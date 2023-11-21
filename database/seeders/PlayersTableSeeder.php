@@ -14,6 +14,6 @@ class PlayersTableSeeder extends Seeder
      */
     public function run()
     {
-        Player::factory(11)->create();
+        Player::factory(10)->create();
     }
 }
