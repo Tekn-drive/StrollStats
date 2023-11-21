@@ -27,9 +27,9 @@ class PlayerUserController extends Controller
             'name' => $validateData['name'],
             'email' => $validateData['email'],
         ]);
-
+        
         $user->player->update([
-            'phone_number' => $validateData['player_phone'],
+            'player_phone' => $validateData['player_phone'],
         ]);
 
         return redirect()->route('user.edit', ['user' => $user->id])->with('message', "User \"{$validateData['name']}\" details updated successfuly!");
