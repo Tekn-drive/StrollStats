@@ -9,6 +9,13 @@ use App\Models\User;
 
 class StepController extends Controller
 {
+
+   public function __construct()
+   {
+       $this->middleware('auth');
+   }
+
+
     public function index()
     {
         $user = auth()->user();
