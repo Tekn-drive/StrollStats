@@ -18,4 +18,11 @@
     <p>Total Steps Taken: {{ $totalSteps }}</p>
 
     <a href="/home/edit" class="btn btn-primary">Edit Profile</a>
+
+    <h2>Leaderboard</h2>
+    <ul>
+        @foreach ($usersWithSteps as $user)
+            <li>{{ $user->name }}: {{ $user->totalSteps }} steps</li>
+        @endforeach
+    </ul>
 @endsection
