@@ -46,6 +46,8 @@ Route::get('/progress', function(){
     return view('progress');
 });
 
+Route::get('/leaderboard', [App\Http\Controllers\LeaderboardController::class, 'viewSteps']);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
