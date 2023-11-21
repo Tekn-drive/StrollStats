@@ -57,3 +57,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/home/edit', [PlayerUserController::class, 'editUser'])->name('user.edit');
 
 Route::put('/home/update', [PlayerUserController::class, 'updateUser']);
+
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/'); // Redirect to the desired location after logout
+})->name('logout');
