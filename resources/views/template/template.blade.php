@@ -11,23 +11,16 @@
     <link rel = "stylesheet" href = "css/template.css">
   </head>
   <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-info">
-        <div class="container-fluid">
-    
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <img src="{{ asset('Assets/Title Small.png') }}" width="150" alt="Logo" class="d-inline-block align-text-top">
-            <!-- <img src="Logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-    
-            
-          <ul class="navbar-nav">
-                <!-- <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
-                </li> -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <!-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm bg-info"> -->
+        <div class="container mx-auto">
+            <a class="navbar-brand" href="{{ url('/') }}">
+                <img src="Assets/Title Small.png" width="150" alt="Logo" class="d-inline-block align-text-top">
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Side Of Navbar -->
+                <ul class="navbar-nav me-auto">
                 <li class="nav-item">   
                 <a class="nav-link" href="/home">Home</a>
             </li>
@@ -37,12 +30,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="/tracker">Track Your Steps</a>
             </li>
-            <li class="nav-item">
-                <!-- <form action="{{ route('logout') }}" method="POST">
+            <!-- <li class="nav-item">
+                <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button type="submit" class="btn btn-link">Logout</button>
-                </form> -->
-            </li>
+                </form>
+            </li> -->
                 </ul>
 
                 <!-- Right Side Of Navbar -->
