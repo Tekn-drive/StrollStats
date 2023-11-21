@@ -9,26 +9,52 @@
 <div class="container my-5 about-background">
     
     <div class="row">
-        <div class="col-12">
-            <h1 class="text-center">For those who walk the extra mile</h1>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta vel quod ducimus placeat neque,
-                 totam sit dignissimos rerum ratione consequatur?</p>
+        <div class="col-12" style="max-width: 1100px; margin-left: auto; margin-right: auto;">
+            <h1 class="text-center">For those who walk the extra mile</h1><br>
+            <p class="text-center" style="font-size: 18px;">Embark on a journey of wellness and discovery with StrollStats, your dedicated companion for tracking every step 
+                towards a healthier life. Our step-tracking application is designed for individuals who strive to go 
+                beyond the ordinary, who take the road less traveled — literally. <br><br>
+
+                At StrollStats, we believe that every step counts. Whether you're taking a leisurely walk in the park, 
+                embarking on a vigorous hike, or simply moving more throughout your day, our application is here to 
+                capture your progress, encourage your movements, and celebrate your milestones. <br><br>
+                
+                For the dreamers who aspire to climb mountains, for the determined who aim to outpace the ordinary, 
+                and for the everyday heroes finding adventure in the urban sprawl — StrollStats is here to ensure that 
+                when you go the extra mile, it's counted, recorded, and honored. <br><br>
+                
+                Join our community of walkers, joggers, and fitness enthusiasts who all share one common goal:
+                 to keep moving forward, one step at a time. With StrollStats, turn your daily walks into strides 
+                 towards a healthier future, and let's take the path to peak wellness together. <br><br>
+                
+                "Because every journey begins with a single step — and we're here to count them all."</p><br>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-12">
-            <h2 class="text-center">Our Mission</h2>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta vel quod ducimus placeat neque,
-                 totam sit dignissimos rerum ratione consequatur?</p>
+        <div class="col-12" style="max-width: 1100px; margin-left: auto; margin-right: auto;">
+            <h2 class="text-center">Our Mission</h2><br>
+            <p class="text-center" style="font-size: 18px;">At StrollStats, our mission is to inspire and empower individuals to lead more active and fulfilling 
+                lives through the simple act of walking. We're committed to providing a robust and intuitive platform that not only 
+                tracks each step but also offers insights and encouragement to help our users reach their personal health and 
+                wellness goals. <br><br>
+                
+                We aim to be a catalyst for positive change, fostering a community where progress is celebrated, 
+                support is abundant, and the benefits of a step-forward lifestyle are accessible to everyone, everywhere.</p><br>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-12">
+        <div class="col-12" style="max-width: 1100px; margin-left: auto; margin-right: auto;">
             <h2 class="text-center">Our Values</h2>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta vel quod ducimus placeat neque,
-                 totam sit dignissimos rerum ratione consequatur?</p>
+            <p class="text-center" style="font-size: 18px;">Our vision is a future where movement is a cornerstone of daily life, and every step taken is a 
+                stride towards global health and happiness. We envision StrollStats as more than just an app; it's a movement revolution, 
+                a part of daily routines, and a constant companion on the path to wellness. <br><br>
+                
+                We strive to harness the power of technology 
+                to break down barriers to physical activity and to create a world where every step is an opportunity to better ourselves 
+                and our communities. With every mile mapped and every goal achieved, we're creating a healthier, more active world—one 
+                step at a time.</p><br>
         </div>
     </div>
 

@@ -19,7 +19,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <img src="Assets/Title Small.png" width="150" alt="Logo" class="d-inline-block align-text-top">
+            <img src="{{ asset('Assets/Title Small.png') }}" width="150" alt="Logo" class="d-inline-block align-text-top">
             <!-- <img src="Logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> -->
             <div class="collapse navbar-collapse" id="navbarNav">
     
