@@ -38,4 +38,12 @@ class StepController extends Controller
 
         return redirect()->route('steps.allSteps');
     }
+
+    public function destroy($stepId)
+    {
+        $step = Step::findOrFail($stepId); // Assuming 'Step' is your model name
+        $step->delete();
+
+        return back()->with('success', 'Step record deleted successfully.');
+    }
 }

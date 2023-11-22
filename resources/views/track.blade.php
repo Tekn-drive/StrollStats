@@ -6,6 +6,13 @@
 
 @section('container')
 <div>
+
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <h1>Add New Record!</h1>
     <h6>How many steps have you taken today?</h6>
     @if ($errors->any())
@@ -53,6 +60,13 @@
                     <th scope="row">{{ $i+1 }}</th>  
                     <td>{{ $step->created_at }}</td> 
                     <td>{{ $step->steps }}</td>
+                    <td>
+                        <form action="{{ route('steps.destroy', $step->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
                 </tr>
                 @php
                     $i = $i + 1;

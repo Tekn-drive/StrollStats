@@ -64,3 +64,5 @@ Route::post('/logout', function () {
     Auth::logout();
     return redirect('/'); // Redirect to the desired location after logout
 })->name('logout');
+
+Route::delete('/tracker/delete/{step}', [StepController::class, 'destroy'])->name('steps.destroy');
