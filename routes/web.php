@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StepController;
 use App\Http\Controllers\PlayerUserController;
-
+use App\Http\Controllers\GoogleAuthController;
+use App\Http\Controllers\Socialite;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -64,5 +65,8 @@ Route::post('/logout', function () {
     Auth::logout();
     return redirect('/'); // Redirect to the desired location after logout
 })->name('logout');
+
+Route::get('auth/google', [GoogleAuthController::class,'redirect']) -> name('google-auth');
+Route::get('auth/google/call-back', [GoogleAuthController::class,'callbackGoogle']);
 
 Route::delete('/tracker/delete/{step}', [StepController::class, 'destroy'])->name('steps.destroy');

@@ -65,6 +65,10 @@
                                 @endif
                             </div>
                         </div>
+
+                        <a href="{{route('google-auth')}}">
+                            <span> CONTINUE WITH GOOGLE </span>
+                        </a>
                     </form>
                 </div>
             </div>
