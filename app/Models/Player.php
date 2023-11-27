@@ -16,5 +16,6 @@ class Player extends Model
 
     protected $fillable = [
         'player_phone',
+        'player_gender',
     ];
 }
