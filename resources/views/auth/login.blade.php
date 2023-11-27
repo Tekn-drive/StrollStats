@@ -13,7 +13,7 @@
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                            <label for="email">{{ __('Email Address') }}</label>
 
                             <div class = "input-group input-group-lg">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -26,10 +26,10 @@
                             </div>
                         </div>
 
+                        
                         <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
+                            <label for="password">{{ __('Password') }}</label>
+                            <div class="input-group input-group-lg">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
@@ -65,11 +65,13 @@
                                 @endif
                             </div>
                         </div>
-
-                        <a href="{{route('google-auth')}}">
-                            <span> CONTINUE WITH GOOGLE </span>
-                        </a>
                     </form>
+
+                    <div>
+                        <a href="{{route('google-auth')}}">
+                                <span> CONTINUE WITH GOOGLE </span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
