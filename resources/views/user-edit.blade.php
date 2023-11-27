@@ -50,12 +50,25 @@
 
                 <div class="form-group" style="margin-top: 5px;">
                     <label for="player_phone">Phone Number</label>
-                    <input type="text" class="form-control" id="player_phone" name="player_phone" value="{{ $playerDetails->player_phone }}">
-                    {{-- CRUD --}}
+                    <input type="text" class="form-control" id="player_phone" name="player_phone" value="{{ $playerDetails->player_phone ?? '-' }}">
                     @error('player_phone')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </div>
+
+                <div class="form-group" style="margin-top: 5px;">
+                    <label for="player_gender">Gender</label>
+                    <select class="form-control" id="player_gender" name="player_gender">
+                        <option value="">Select Gender</option>
+                        <option value="Male" {{ $user->player?->player_gender == 'Male' ? 'selected' : '' }}>Male</option>
+                        <option value="Female" {{ $user->player?->player_gender == 'Female' ? 'selected' : '' }}>Female</option>
+                        <option value="Other" {{ $user->player?->player_gender == 'Other' ? 'selected' : '' }}>Other</option>
+                    </select>
+                    @error('player_gender')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+
                 <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Update</button>
 
             </form>

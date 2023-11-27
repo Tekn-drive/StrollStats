@@ -22,6 +22,7 @@ class PlayerUserController extends Controller
             'name' => 'required|min:3|max:50',
             'email' => 'required|email',
             'player_phone' => 'required|min:10|max:13',
+            'player_gender' => 'nullable|in:Male,Female,Other',
         ]);
 
         $user = auth()->user();
@@ -32,6 +33,7 @@ class PlayerUserController extends Controller
         
         $user->player->update([
             'player_phone' => $validateData['player_phone'],
+            'player_gender' => $validateData['player_gender'] ?? null,
         ]);
 
         return redirect()->route('user.edit', ['user' => $user->id])->with('message', "User \"{$validateData['name']}\" details updated successfuly!");
