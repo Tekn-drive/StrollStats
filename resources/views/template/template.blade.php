@@ -15,7 +15,7 @@
     <!-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm bg-info"> -->
         <div class="container mx-auto">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="Assets/Title Small.png" width="150" alt="Logo" class="d-inline-block align-text-top">
+                <img src="{{ asset('Assets/Title Small.png') }} " width="150" alt="Logo" class="d-inline-block align-text-top">
             </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">

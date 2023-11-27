@@ -61,5 +61,11 @@
             </form>
         </div>
     </div>
+
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-9 col-md-6 offset-md-3 text-center">
+            <a href="{{ route('password.edit') }}" class="btn btn-secondary">Change Password</a>
+        </div>
+    </div>
 </div>
 @endsection

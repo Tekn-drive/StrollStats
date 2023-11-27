@@ -70,3 +70,7 @@ Route::get('auth/google', [GoogleAuthController::class,'redirect']) -> name('goo
 Route::get('auth/google/call-back', [GoogleAuthController::class,'callbackGoogle']);
 
 Route::delete('/tracker/delete/{step}', [StepController::class, 'destroy'])->name('steps.destroy');
+
+Route::post('/password/update', [PlayerUserController::class, 'updatePassword'])->name('password.update');
+
+Route::get('/password/edit', [PlayerUserController::class, 'editPassword'])->name('password.edit');
