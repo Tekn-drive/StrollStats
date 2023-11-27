@@ -23,8 +23,7 @@
         @csrf
         <div class="form-group">
             <label for="steps" class="form-label">Enter the steps you taken:</label>
-            <input type="text" class="form-control d-block mx-auto" id="steps" name="steps" value="{{ old('steps') }}" style="max-width: 400px;"> <!-- Constrain the width of input -->
-            @error('steps')
+            <input type="text" class="form-control d-block mx-auto" id="steps" name="steps" value="{{ old('steps') }}" style="max-width: 400px;"> 
                 <div class="text-danger">{{ $message }}</div>
             @enderror
         </div>
