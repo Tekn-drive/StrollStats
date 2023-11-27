@@ -5,6 +5,13 @@
 @endsection
 
 @section('container')
+
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
 <div class="mt-4 mb-4 p-3 text-center">
     <h1>Add New Record!</h1>
     <h6>How many steps have you taken today?</h6>
@@ -23,14 +30,15 @@
         @csrf
         <div class="form-group">
             <label for="steps" class="form-label">Enter the steps you taken:</label>
-            <input type="text" class="form-control d-block mx-auto" id="steps" name="steps" value="{{ old('steps') }}" style="max-width: 400px;"> 
+            <input type="text" class="form-control d-block mx-auto" id="steps" name="steps" 
+            value="{{ old('steps') }}" style="max-width: 400px;">
+            @error('steps')
                 <div class="text-danger">{{ $message }}</div>
             @enderror
         </div>
         <button type="submit" class="btn btn-primary mt-3 mx-auto">Register</button>
     </form>
 </div>
-
 
 <div class="mt-4 p-3">
     <div class="row justify-content-center">
@@ -53,7 +61,8 @@
                             <td>{{ $step->created_at }}</td> 
                             <td>{{ $step->steps }}</td>
                             <td>
-                                <form action="{{ route('steps.destroy', $step->id) }}" method="POST" class="d-flex justify-content-center">
+                                <form action="{{ route('steps.destroy', $step->id) }}" method="POST" 
+                                    class="d-flex justify-content-center">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Delete</button>
