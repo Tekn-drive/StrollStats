@@ -30,6 +30,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/tracker">Track Your Steps</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/rewards">Rewards</a>
+            </li>
             <!-- <li class="nav-item">
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf

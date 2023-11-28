@@ -56,4 +56,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Player::class, 'player_id');
     }
+
+    public function vouchers()
+    {
+        return $this->hasMany(Voucher::class, 'player_id');
+    }
 }

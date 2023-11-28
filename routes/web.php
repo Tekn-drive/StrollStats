@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StepController;
 use App\Http\Controllers\PlayerUserController;
 use App\Http\Controllers\GoogleAuthController;
+use App\Http\Controllers\VoucherController;
 use App\Http\Controllers\Socialite;
 /*
 |--------------------------------------------------------------------------
@@ -74,3 +75,5 @@ Route::delete('/tracker/delete/{step}', [StepController::class, 'destroy'])->nam
 Route::post('/password/update', [PlayerUserController::class, 'updatePassword'])->name('password.update');
 
 Route::get('/password/edit', [PlayerUserController::class, 'editPassword'])->name('password.edit');
+
+Route::get('/rewards', [VoucherController::class, 'openVoucherMenu']);
