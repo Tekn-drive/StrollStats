@@ -39,19 +39,24 @@ class GoogleAuthController extends Controller
             $datasetId = $startTime . '-' . $endTime;
     
             $dataSet = $fitness_service->users_dataSources_datasets->get('me', $dataSourceId, $datasetId);
-    
-            \Log::debug("test log");
-            \Log::info('Step Data:', ['data' => $dataSet]);
-            
-            file_put_contents(storage_path('logs/custom_log.log'), "Test log entry\n", FILE_APPEND);
-    
-    
-    
-            if (empty($dataSet)) {
-                file_put_contents(storage_path('logs/custom_log.log'), "DataSet is empty\n", FILE_APPEND);
-            } else {
-                file_put_contents(storage_path('logs/custom_log.log'), print_r($dataSet, true), FILE_APPEND);
+
+            $points = $dataSet->getPoint();
+
+            $totalSteps = 0;
+
+            foreach ($points as $point) {
+                // Each point has a value field, which is an array. The first item in this array contains the step count.
+                $values = $point->getValue();
+
+                if (!empty($values)) {
+                    $totalSteps += $values[0]->getIntVal(); // Assuming the step count is an integer value
+                }
             }
+
+            file_put_contents(storage_path('logs/custom_log.log'), print_r($totalSteps, true), FILE_APPEND);
+
+            $stepController = new StepController();
+
 
             if(!$user){
                 $new_user = User::create([
@@ -67,7 +72,8 @@ class GoogleAuthController extends Controller
                 ]);
 
                 Auth::login($new_user);
-    
+                $stepController->saveSteps($new_user->id, $totalSteps);
+
                 return redirect() -> intended('home');
             }
             else{
@@ -77,5 +83,7 @@ class GoogleAuthController extends Controller
         } catch (\Throable $th){
             dd("Something Went Wrong", $th -> getMessage());
         }
+
+
     }
 }

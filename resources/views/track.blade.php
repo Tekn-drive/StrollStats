@@ -40,6 +40,8 @@
     </form>
 </div>
 
+<!-- <a href="{{ route('google.getFitData') }}">Sync with Google Fit</a> -->
+
 <div class="mt-4 p-3">
     <div class="row justify-content-center">
         <div class="col-md-10 col-lg-8">

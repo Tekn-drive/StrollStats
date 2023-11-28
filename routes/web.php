@@ -77,3 +77,5 @@ Route::post('/password/update', [PlayerUserController::class, 'updatePassword'])
 Route::get('/password/edit', [PlayerUserController::class, 'editPassword'])->name('password.edit');
 
 Route::get('/rewards', [VoucherController::class, 'openVoucherMenu']);
+
+Route::get('/syncForm', [GoogleAuthController::class, 'getFitData'])->name('google.getFitData');

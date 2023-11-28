@@ -46,4 +46,13 @@ class StepController extends Controller
 
         return back()->with('success', 'Step record deleted successfully.');
     }
+
+    public function saveSteps($userId, $steps) {
+        $step = new Step();
+        $step->player_id = $userId;
+        $step->steps = $steps;
+        $step->save();
+        // return redirect()->route('steps.allSteps');
+    }
+
 }
