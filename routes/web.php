@@ -74,3 +74,5 @@ Route::delete('/tracker/delete/{step}', [StepController::class, 'destroy'])->nam
 Route::post('/password/update', [PlayerUserController::class, 'updatePassword'])->name('password.update');
 
 Route::get('/password/edit', [PlayerUserController::class, 'editPassword'])->name('password.edit');
+
+// Route::get('/syncForm', [GoogleAuthController::class, 'getFitData'])->name('google.getFitData');
