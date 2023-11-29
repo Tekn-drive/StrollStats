@@ -1,0 +1,38 @@
+body{
+    background: url("/Assets/Login Background.png") no-repeat center center fixed; 
+}
+
+.voucher {
+    width: 300px; 
+    margin: 10px;
+    border: 1px solid #ccc; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden; 
+    flex: 0 1 calc(33.333% - 20px); /* Assuming you want 3 cards per row, adjust the percentage for more or less cards */
+    /* flex-grow | flex-shrink | flex-basis */
+}
+
+.voucher-container {
+    display: grid;
+    margin: 0 auto; 
+    margin: 0 auto; 
+    max-width: 950px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.voucher img {
+    width: 300px; 
+    height: 150px;
+    object-fit: cover; 
+    display: block
+}
+
+.voucher-details {
+    padding: 10px; 
+    text-align: center; 
+}
