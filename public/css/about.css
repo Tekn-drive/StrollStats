@@ -1,3 +1,7 @@
+body{
+    background: url("/Assets/Login Background.png") no-repeat center center fixed; 
+}
+
 .team-card {
     max-width: 250px;
     margin: auto; 

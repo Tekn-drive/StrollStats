@@ -12,6 +12,12 @@
     </div>
 @endif
 
+<style>
+    body {
+        background: url("/Assets/Login Background.png") no-repeat center center fixed;
+    }
+</style>
+
 <div class="mt-4 mb-4 p-3 text-center">
     <h1>Add New Record!</h1>
     <h6>How many steps have you taken today?</h6>
