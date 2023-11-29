@@ -26,6 +26,6 @@ class VoucherController extends Controller
         }
 
         $vouchers = $user->vouchers;
-        return view('reward', compact('vouchers', 'user', 'player'));
+        return view('reward', compact('vouchers', 'user', 'player', 'voucherMilestones'));
     }
 }

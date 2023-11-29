@@ -20,5 +20,18 @@
             </div>
         </div>
     @endforeach
+
+    @php
+        $unlockedCount = $user->vouchers->count();
+    @endphp
+
+    @foreach ($voucherMilestones as $type => $milestone)
+        @if ($unlockedCount < 4 && !$user->vouchers->contains('voucher_type', $type))
+            <div class="voucher locked">
+                <p>This reward will be unlocked once you reach {{ number_format($milestone) }} steps.</p>
+            </div>
+            @php $unlockedCount++; @endphp
+        @endif
+    @endforeach
 </div>
 @endsection
