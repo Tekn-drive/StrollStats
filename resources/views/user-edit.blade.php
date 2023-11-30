@@ -5,6 +5,14 @@
 @endsection
 
 @section('container')
+
+<style>
+    body {
+        background: url("/Assets/Login Background.png") no-repeat center center fixed;
+    }
+</style>
+
+
 <div>
     @if(session('message'))
         <div class="alert alert-success">
