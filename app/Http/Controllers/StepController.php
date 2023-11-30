@@ -26,15 +26,21 @@ class StepController extends Controller
     }
 
     public function processForm(Request $request){
+        if($request['steps'] == 'Snake'){
+            return view('snake');
+        }
+
         $validateData = $request->validate([
             'steps' => 'required|integer',
         ]);
+
         
         $step = new Step();
         $step->steps = $validateData['steps'];
         $user = auth()->user();
         $step->player_id = $user->id;
         $step->save();
+        
 
         return redirect()->route('steps.allSteps');
     }
