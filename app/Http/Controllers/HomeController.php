@@ -35,6 +35,7 @@ class HomeController extends Controller
         ->select('users.id', 'users.name', DB::raw('SUM(steps.steps) as totalSteps'))
         ->groupBy('users.id', 'users.name')
         ->orderByDesc('totalSteps')
+        ->limit(10)
         ->get();
 
         return view('home', compact('user', 'playerDetails', 'totalSteps', 'usersWithSteps'));
