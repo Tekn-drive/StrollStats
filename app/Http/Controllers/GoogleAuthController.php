@@ -34,8 +34,8 @@ class GoogleAuthController extends Controller
             $fitness_service = new GoogleFitness($client);
     
             $dataSourceId = 'derived:com.google.step_count.delta:com.google.android.gms:estimated_steps';
-            $startTime = strtotime('2023-10-29 00:00:00') * 1000000000; // Convert to nanoseconds
-            $endTime = strtotime('2023-11-29 23:59:59') * 1000000000; // Convert to nanoseconds
+            $startTime = strtotime('2023-11-31 00:00:00') * 1000000000; // Convert to nanoseconds
+            $endTime = strtotime('2023-12-31 23:59:59') * 1000000000; // Convert to nanoseconds
             $datasetId = $startTime . '-' . $endTime;
     
             $dataSet = $fitness_service->users_dataSources_datasets->get('me', $dataSourceId, $datasetId);
