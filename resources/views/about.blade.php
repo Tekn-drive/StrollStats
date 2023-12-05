@@ -108,8 +108,8 @@
                 ['image' => 'juan.png', 'name' => 'Juan Arnold', 'title' => 'Technical Director'],
                 ['image' => 'darian.jpg', 'name' => 'Darian Elbert', 'title' => 'Financial Analyst'],
                 ['image' => 'deci.jpg', 'name' => 'Nathanael Deciano', 'title' => 'Systems Administrator'],
-                ['image' => 'juan.png', 'name' => 'Dave Sebastian', 'title' => 'Project Manager'],
-                ['image' => 'juan.png', 'name' => 'Nathan Setiawan', 'title' => 'Operations Manager'],
+                ['image' => 'dave.jpg', 'name' => 'Dave Sebastian', 'title' => 'Project Manager'],
+                ['image' => 'nathan.jpg', 'name' => 'Nathan Setiawan', 'title' => 'Operations Manager'],
             ];
         @endphp
 
